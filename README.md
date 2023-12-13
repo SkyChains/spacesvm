@@ -64,19 +64,6 @@ Web3 wallet that can sign typed data can interact with SpacesVM.
 is an EVM or even an EVM derivative.** SpacesVM is a new Lux-native VM written
 from scratch to optimize for storage-related operations.
 
-## Demo: [tryspaces.xyz]
-What better way to understand how the the SpacesVM works than to see it in action?
-Well anon, you are in luck!
-
-You can try out the SpacesVM at [tryspaces.xyz]. All you need
-is a [EIP-712] Compatible Web3 Wallet (like [MetaMask](https://metamask.io)) and some `SPC` (all 973k of
-you that interacted with the [C-Chain] more than 2 times got 10k `SPC` to get you
-started).
-
-This demo is running as an Lux [Subnet] on Fuji. It is **ALPHA LEVEL CODE** and may be
-restarted/have a few bugs in it. It exists for demonstration purposes **ONLY**
-but could be extended to run as a production-level [Subnet] on Lux Mainnet.
-
 ## How it Works
 ### Claim
 Interacting with the SpacesVM starts with a `ClaimTx`. This reserves your own
@@ -534,7 +521,7 @@ To build the VM (and `spaces-cli`), run `./scripts/build.sh`.
 
 ### Joining the Spaces Demo
 If you'd like to validate the [Spaces Subnet Demo] on Fuji, please follow the following
-steps: 
+steps:
 
 _You can find the genesis used for the Spaces Demo in `networks/42/*`._
 
@@ -569,8 +556,8 @@ mv ./spacesvm/build/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm ./node/bui
 #### Add Subnet to Whitelist
 Next, you'll need to provide the `whitelisted-subnets` argument by
 modifying your config file or providing an argument on
-startup (which tells your node to connect to the Spaces Subnet Demo). 
-[Ai42MkKqk8yjXFCpoHXw7rdTWSHiKEMqh5h8gbxwjgkCUfkrk](https://testnet.avascan.info/blockchains?subnet=Ai42MkKqk8yjXFCpoHXw7rdTWSHiKEMqh5h8gbxwjgkCUfkrk) 
+startup (which tells your node to connect to the Spaces Subnet Demo).
+[Ai42MkKqk8yjXFCpoHXw7rdTWSHiKEMqh5h8gbxwjgkCUfkrk](https://testnet.avascan.info/blockchains?subnet=Ai42MkKqk8yjXFCpoHXw7rdTWSHiKEMqh5h8gbxwjgkCUfkrk)
 is the subnet id for Spaces Subnet.
 
 Example Config File:

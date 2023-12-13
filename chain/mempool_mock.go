@@ -1,4 +1,4 @@
-// Copyright (C) 2022, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2022, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 //
 
@@ -10,8 +10,8 @@ package chain
 import (
 	reflect "reflect"
 
-	ids "github.com/ava-labs/avalanchego/ids"
-	set "github.com/ava-labs/avalanchego/utils/set"
+	ids "github.com/luxdefi/node/ids"
+	set "github.com/luxdefi/node/utils/set"
 	gomock "github.com/golang/mock/gomock"
 )
 

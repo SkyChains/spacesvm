@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 // Package version implements "version" commands.
@@ -7,8 +7,8 @@ package version
 import (
 	"fmt"
 
-	"github.com/ava-labs/spacesvm/version"
-	"github.com/ava-labs/spacesvm/vm"
+	"github.com/luxdefi/spacesvm/version"
+	"github.com/luxdefi/spacesvm/vm"
 	"github.com/spf13/cobra"
 )
 

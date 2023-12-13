@@ -1,12 +1,12 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package vm
 
 import (
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/vms"
-	"github.com/ava-labs/spacesvm/vm"
+	"github.com/luxdefi/node/snow"
+	"github.com/luxdefi/node/vms"
+	"github.com/luxdefi/spacesvm/vm"
 )
 
 var _ vms.Factory = &Factory{}

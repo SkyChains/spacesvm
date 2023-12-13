@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	avagoVersion "github.com/ava-labs/avalanchego/version"
-	spacesVersion "github.com/ava-labs/spacesvm/version"
+	luxdVersion "github.com/luxdefi/node/version"
+	spacesVersion "github.com/luxdefi/spacesvm/version"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -25,5 +25,5 @@ func TestCompatibility(t *testing.T) {
 	currentSpacesRPC, valueInJSON := compat.RPCChainVMProtocolVersion[spacesVersion.Version.String()]
 	assert.True(t, valueInJSON)
 
-	assert.Equal(t, avagoVersion.RPCChainVMProtocol, currentSpacesRPC)
+	assert.Equal(t, luxdVersion.RPCChainVMProtocol, currentSpacesRPC)
 }

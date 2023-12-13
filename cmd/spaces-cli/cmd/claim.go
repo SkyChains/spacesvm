@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package cmd
@@ -12,9 +12,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/parser"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/client"
+	"github.com/luxdefi/spacesvm/parser"
 )
 
 var claimCmd = &cobra.Command{
@@ -24,9 +24,9 @@ var claimCmd = &cobra.Command{
 Claims the given space by issuing claim transaction
 with the space information.
 
-# Issues "ClaimTx" for the ownership of "hello.avax".
-# "hello.avax" is the space (or namespace)
-$ spaces-cli claim hello.avax
+# Issues "ClaimTx" for the ownership of "hello.lux".
+# "hello.lux" is the space (or namespace)
+$ spaces-cli claim hello.lux
 <<COMMENT
 success
 COMMENT

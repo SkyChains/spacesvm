@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package chain
@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/snow/choices"
 	"github.com/ethereum/go-ethereum/crypto"
 	gomock "github.com/golang/mock/gomock"
 )

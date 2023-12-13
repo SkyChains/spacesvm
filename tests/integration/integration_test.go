@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 // integration implements the integration tests.
@@ -21,14 +21,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ava-labs/avalanchego/database/manager"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/avalanchego/utils/units"
-	avago_version "github.com/ava-labs/avalanchego/version"
+	"github.com/luxdefi/node/database/manager"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/snow"
+	"github.com/luxdefi/node/snow/choices"
+	"github.com/luxdefi/node/snow/engine/common"
+	"github.com/luxdefi/node/utils/set"
+	"github.com/luxdefi/node/utils/units"
+	luxd_version "github.com/luxdefi/node/version"
 	ecommon "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
@@ -36,12 +36,12 @@ import (
 	ginkgo "github.com/onsi/ginkgo/v2"
 	"github.com/onsi/gomega"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/parser"
-	"github.com/ava-labs/spacesvm/tdata"
-	"github.com/ava-labs/spacesvm/tree"
-	"github.com/ava-labs/spacesvm/vm"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/client"
+	"github.com/luxdefi/spacesvm/parser"
+	"github.com/luxdefi/spacesvm/tdata"
+	"github.com/luxdefi/spacesvm/tree"
+	"github.com/luxdefi/spacesvm/vm"
 )
 
 func TestIntegration(t *testing.T) {
@@ -150,7 +150,7 @@ var _ = ginkgo.BeforeSuite(func() {
 		}
 
 		toEngine := make(chan common.Message, 1)
-		db := manager.NewMemDB(avago_version.CurrentDatabase)
+		db := manager.NewMemDB(luxd_version.CurrentDatabase)
 
 		// TODO: test appsender
 		v := &vm.VM{AirdropData: airdropData}
@@ -402,7 +402,7 @@ var _ = ginkgo.Describe("Tx Types", func() {
 			gomega.Ω(len(values)).To(gomega.Equal(0))
 		})
 
-		k, v := "avaxkvm", []byte("hello")
+		k, v := "luxkvm", []byte("hello")
 		setTx := &chain.SetTx{
 			BaseTx: &chain.BaseTx{},
 			Space:  space,

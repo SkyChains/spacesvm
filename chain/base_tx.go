@@ -1,10 +1,10 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package chain
 
 import (
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/luxdefi/node/ids"
 )
 
 type BaseTx struct {

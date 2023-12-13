@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package mempool
@@ -6,9 +6,9 @@ package mempool
 import (
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/luxdefi/node/ids"
 
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/chain"
 )
 
 // txEntry is used to track the work transactions pay to be included in the

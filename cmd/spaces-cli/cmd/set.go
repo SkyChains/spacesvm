@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package cmd
@@ -11,9 +11,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/parser"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/client"
+	"github.com/luxdefi/spacesvm/parser"
 )
 
 var setCmd = &cobra.Command{
@@ -31,26 +31,26 @@ in order to maintain the flat key space.
 It assumes the space is already claimed via "spaces-cli claim".
 Otherwise, the set transaction will fail.
 
-# claims the space "hello.avax"
-# "hello.avax" is the space (or namespace)
-$ spaces-cli claim hello.avax
+# claims the space "hello.lux"
+# "hello.lux" is the space (or namespace)
+$ spaces-cli claim hello.lux
 <<COMMENT
 success
 COMMENT
 
 # writes a key-value pair for the given namespace (space)
 # by issuing "SetTx" preceded by "IssueTx" on the space:
-# "hello.avax" is the space (or namespace)
+# "hello.lux" is the space (or namespace)
 # "foo" is the key
 # "hello world" is the value
-$ spaces-cli set hello.avax/foo "hello world"
+$ spaces-cli set hello.lux/foo "hello world"
 <<COMMENT
 success
 COMMENT
 
 # The existing key-value cannot be overwritten by a different owner.
 # The space must be claimed before it allows key-value writes.
-$ spaces-cli set hello.avax/foo "hello world" --private-key-file=.different-key
+$ spaces-cli set hello.lux/foo "hello world" --private-key-file=.different-key
 <<COMMENT
 error
 COMMENT

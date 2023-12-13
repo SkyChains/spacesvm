@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package chain
@@ -6,9 +6,9 @@ package chain
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
+	"github.com/luxdefi/node/database/versiondb"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/snow/consensus/snowman"
 	log "github.com/inconshreveable/log15"
 )
 

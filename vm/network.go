@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package vm
@@ -6,9 +6,9 @@ package vm
 import (
 	"context"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/luxdefi/node/cache"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/spacesvm/chain"
 	log "github.com/inconshreveable/log15"
 )
 
@@ -104,7 +104,7 @@ func (n *PushNetwork) RegossipTxs() error {
 //
 // implements "snowmanblock.ChainVM.commom.VM.AppHandler"
 // assume gossip via proposervm has been activated
-// ref. "avalanchego/vms/platformvm/network.AppGossip"
+// ref. "node/vms/platformvm/network.AppGossip"
 // ref. "coreeth/plugin/evm.GossipHandler.HandleEthTxs"
 func (vm *VM) AppGossip(ctx context.Context, nodeID ids.NodeID, msg []byte) error {
 	log.Debug("AppGossip message handler",

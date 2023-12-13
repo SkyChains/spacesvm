@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package cmd
@@ -12,8 +12,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/tree"
+	"github.com/luxdefi/spacesvm/client"
+	"github.com/luxdefi/spacesvm/tree"
 )
 
 var resolveFileCmd = &cobra.Command{

@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package chain
@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/ava-labs/spacesvm/parser"
-	"github.com/ava-labs/spacesvm/tdata"
+	"github.com/luxdefi/spacesvm/parser"
+	"github.com/luxdefi/spacesvm/tdata"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 

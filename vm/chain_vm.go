@@ -1,15 +1,15 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package vm
 
 import (
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/set"
+	"github.com/luxdefi/node/database"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/utils/set"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/chain"
 )
 
 func (vm *VM) Genesis() *chain.Genesis {

@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package main
@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm"
-	"github.com/ava-labs/spacesvm/cmd/spacesvm/version"
-	"github.com/ava-labs/spacesvm/vm"
+	"github.com/luxdefi/node/vms/rpcchainvm"
+	"github.com/luxdefi/spacesvm/cmd/spacesvm/version"
+	"github.com/luxdefi/spacesvm/vm"
 	log "github.com/inconshreveable/log15"
 	"github.com/spf13/cobra"
 )

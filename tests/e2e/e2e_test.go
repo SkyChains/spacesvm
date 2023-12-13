@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2022, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2022, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 // e2e implements the e2e tests.
@@ -15,13 +15,13 @@ import (
 	"testing"
 	"time"
 
-	runner_sdk "github.com/ava-labs/avalanche-network-runner/client"
-	"github.com/ava-labs/avalanche-network-runner/rpcpb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/client"
-	"github.com/ava-labs/spacesvm/parser"
+	runner_sdk "github.com/luxdefi/lux-netrunner/client"
+	"github.com/luxdefi/lux-netrunner/rpcpb"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/utils/logging"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/client"
+	"github.com/luxdefi/spacesvm/parser"
 	eth_common "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
@@ -62,34 +62,34 @@ func init() {
 
 	flag.StringVar(
 		&networkRunnerLogLevel,
-		"network-runner-log-level",
+		"netrunner-log-level",
 		"info",
 		"gRPC server endpoint",
 	)
 	flag.StringVar(
 		&gRPCEp,
-		"network-runner-grpc-endpoint",
+		"netrunner-grpc-endpoint",
 		"0.0.0.0:8080",
 		"gRPC server endpoint",
 	)
 	flag.StringVar(
 		&gRPCGatewayEp,
-		"network-runner-grpc-gateway-endpoint",
+		"netrunner-grpc-gateway-endpoint",
 		"0.0.0.0:8081",
 		"gRPC gateway endpoint",
 	)
 
 	flag.StringVar(
 		&execPath,
-		"avalanchego-path",
+		"node-path",
 		"",
-		"avalanchego executable path",
+		"node executable path",
 	)
 	flag.StringVar(
 		&pluginDir,
-		"avalanchego-plugin-dir",
+		"node-plugin-dir",
 		"",
-		"avalanchego plugin directory",
+		"node plugin directory",
 	)
 	flag.StringVar(
 		&vmGenesisPath,
@@ -117,7 +117,7 @@ const vmName = "spacesvm"
 var vmID ids.ID
 
 func init() {
-	// TODO: add "getVMID" util function in avalanchego and import from "avalanchego"
+	// TODO: add "getVMID" util function in node and import from "node"
 	b := make([]byte, 32)
 	copy(b, []byte(vmName))
 	var err error
@@ -229,12 +229,12 @@ done:
 	uris, err := cli.URIs(cctx)
 	ccancel()
 	gomega.Expect(err).Should(gomega.BeNil())
-	outf("{{blue}}avalanche HTTP RPCs URIs:{{/}} %q\n", uris)
+	outf("{{blue}}lux HTTP RPCs URIs:{{/}} %q\n", uris)
 
 	for _, u := range uris {
 		rpcEP := fmt.Sprintf("%s/ext/bc/%s/rpc", u, blockchainID)
 		spacesvmRPCEps = append(spacesvmRPCEps, rpcEP)
-		outf("{{blue}}avalanche spacesvm RPC:{{/}} %q\n", rpcEP)
+		outf("{{blue}}lux spacesvm RPC:{{/}} %q\n", rpcEP)
 	}
 
 	pid := os.Getpid()
@@ -375,7 +375,7 @@ var _ = ginkgo.Describe("[Claim/SetTx]", func() {
 			}
 		})
 
-		k, v := "avaxkvm", []byte("hello")
+		k, v := "luxkvm", []byte("hello")
 		ginkgo.By("mine and issue SetTx to a different node (if available)", func() {
 			setTx := &chain.SetTx{
 				BaseTx: &chain.BaseTx{},
@@ -558,7 +558,7 @@ var _ = ginkgo.Describe("[Claim/SetTx]", func() {
 			}
 		})
 
-		k, v := "avaxkvm", []byte("hello")
+		k, v := "luxkvm", []byte("hello")
 		ginkgo.By("mine and issue SetTx to a different node (if available)", func() {
 			cli := instances[0].cli
 			if len(instances) > 1 {

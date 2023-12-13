@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package chain
@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/utils/units"
+	"github.com/luxdefi/node/database"
+	"github.com/luxdefi/node/database/versiondb"
+	"github.com/luxdefi/node/utils/units"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	log "github.com/inconshreveable/log15"
@@ -108,7 +108,7 @@ func DefaultGenesis() *Genesis {
 		LookbackWindow:   DefaultLookbackWindow, // 60 Seconds
 		TargetBlockRate:  1,                     // 1 Block per Second
 		TargetBlockSize:  225,                   // ~225KB
-		MaxBlockSize:     246,                   // ~246KB -> Limited to 256KB by AvalancheGo (as of v1.7.3)
+		MaxBlockSize:     246,                   // ~246KB -> Limited to 256KB by Luxd (as of v1.7.3)
 		MinPrice:         1,
 		BlockCostEnabled: true,
 	}

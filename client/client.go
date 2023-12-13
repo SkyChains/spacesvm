@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 // Package client implements "spacesvm" client SDK.
@@ -11,16 +11,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/rpc"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/utils/rpc"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/parser"
-	"github.com/ava-labs/spacesvm/tdata"
-	"github.com/ava-labs/spacesvm/vm"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/parser"
+	"github.com/luxdefi/spacesvm/tdata"
+	"github.com/luxdefi/spacesvm/vm"
 )
 
 // Client defines spacesvm client operations.

@@ -3,10 +3,10 @@
 _Authenticated, Hierarchical Key-Value Store w/EIP-712 Compatibility,
 State Expiry, and Fee-Based Metering_
 
-## Avalanche Subnets and Custom VMs
-Avalanche is a network composed of multiple sub-networks (called [subnets][Subnet]) that each contain
+## Lux Subnets and Custom VMs
+Lux is a network composed of multiple sub-networks (called [subnets][Subnet]) that each contain
 any number of blockchains. Each blockchain is an instance of a
-[Virtual Machine (VM)](https://docs.avax.network/learn/platform-overview#virtual-machines),
+[Virtual Machine (VM)](https://docs.lux.network/learn/platform-overview#virtual-machines),
 much like an object in an object-oriented language is an instance of a class. That is,
 the VM defines the behavior of the blockchain where it is instantiated. For example,
 [Coreth (EVM)][Coreth] is a VM that is instantiated by the
@@ -14,29 +14,29 @@ the VM defines the behavior of the blockchain where it is instantiated. For exam
 could deploy another instance of the EVM as their own blockchain (to take
 this to its logical conclusion).
 
-## AvalancheGo Compatibility
+## Luxd Compatibility
 ```
-[v0.0.1] AvalancheGo@v1.7.0-v1.7.4
-[v0.0.2] AvalancheGo@v1.7.5-v1.7.6
-[v0.0.3] AvalancheGo@v1.7.7-v1.7.9
-[v0.0.4] AvalancheGo@v1.7.10
-[v0.0.5] AvalancheGo@v1.7.11-v1.7.12
-[v0.0.6] AvalancheGo@v1.7.13-v1.7.18
-[v0.0.7] AvalancheGo@v1.7.13-v1.7.18
-[v0.0.8] AvalancheGo@v1.8.0-v1.8.6
-[v0.0.9] AvalancheGo@v1.9.0-1.9.1
-[v0.0.10] AvalancheGo@v1.9.2
-[v0.0.11] AvalancheGo@v1.9.2
-[v0.0.12] AvalancheGo@v1.9.3
-[v0.0.13] AvalancheGo@v1.9.4
-[v0.0.14] AvalancheGo@v1.9.4
-[v0.0.14] AvalancheGo@v1.9.4
-[v0.0.15] AvalancheGo@v1.9.6-v1.9.7
+[v0.0.1] Luxd@v1.7.0-v1.7.4
+[v0.0.2] Luxd@v1.7.5-v1.7.6
+[v0.0.3] Luxd@v1.7.7-v1.7.9
+[v0.0.4] Luxd@v1.7.10
+[v0.0.5] Luxd@v1.7.11-v1.7.12
+[v0.0.6] Luxd@v1.7.13-v1.7.18
+[v0.0.7] Luxd@v1.7.13-v1.7.18
+[v0.0.8] Luxd@v1.8.0-v1.8.6
+[v0.0.9] Luxd@v1.9.0-1.9.1
+[v0.0.10] Luxd@v1.9.2
+[v0.0.11] Luxd@v1.9.2
+[v0.0.12] Luxd@v1.9.3
+[v0.0.13] Luxd@v1.9.4
+[v0.0.14] Luxd@v1.9.4
+[v0.0.14] Luxd@v1.9.4
+[v0.0.15] Luxd@v1.9.6-v1.9.7
 ```
 
 ## Introduction
 Just as [Coreth] powers the [C-Chain], SpacesVM can be used to power its own
-blockchain in an Avalanche [Subnet]. Instead of providing a place to execute Solidity
+blockchain in an Lux [Subnet]. Instead of providing a place to execute Solidity
 smart contracts, however, SpacesVM enables authenticated, hierarchical storage of arbitrary
 keys/values using any [EIP-712] compatible wallet.
 
@@ -61,7 +61,7 @@ The canonical digest of a SpacesVM transaction is [EIP-712] compliant, so any
 Web3 wallet that can sign typed data can interact with SpacesVM.
 
 **[EIP-712] compliance in this case, however, does not mean that SpacesVM
-is an EVM or even an EVM derivative.** SpacesVM is a new Avalanche-native VM written
+is an EVM or even an EVM derivative.** SpacesVM is a new Lux-native VM written
 from scratch to optimize for storage-related operations.
 
 ## Demo: [tryspaces.xyz]
@@ -73,9 +73,9 @@ is a [EIP-712] Compatible Web3 Wallet (like [MetaMask](https://metamask.io)) and
 you that interacted with the [C-Chain] more than 2 times got 10k `SPC` to get you
 started).
 
-This demo is running as an Avalanche [Subnet] on Fuji. It is **ALPHA LEVEL CODE** and may be
+This demo is running as an Lux [Subnet] on Fuji. It is **ALPHA LEVEL CODE** and may be
 restarted/have a few bugs in it. It exists for demonstration purposes **ONLY**
-but could be extended to run as a production-level [Subnet] on Avalanche Mainnet.
+but could be extended to run as a production-level [Subnet] on Lux Mainnet.
 
 ## How it Works
 ### Claim
@@ -147,7 +147,7 @@ The easiest way to try out SpacesVM is to visit the demo website
 ### spaces-cli
 #### Install
 ```bash
-git clone https://github.com/ava-labs/spacesvm.git;
+git clone https://github.com/luxdefi/spacesvm.git;
 cd spacesvm;
 go install -v ./cmd/spaces-cli;
 ```
@@ -195,7 +195,7 @@ spaces-cli resolve-file spaceslover/6fe5a52f52b34fb1e07ba90bad47811c645176d0d49e
 spaces-cli delete-file spaceslover/6fe5a52f52b34fb1e07ba90bad47811c645176d0d49ef0c7a7b4b22013f676c8
 ```
 
-### [Golang SDK](https://github.com/ava-labs/spacesvm/blob/master/client/client.go)
+### [Golang SDK](https://github.com/luxdefi/spacesvm/blob/master/client/client.go)
 ```golang
 // Client defines spacesvm client operations.
 type Client interface {
@@ -540,7 +540,7 @@ _You can find the genesis used for the Spaces Demo in `networks/42/*`._
 
 #### Download and Build SpacesVM
 ```bash
-git clone https://github.com/ava-labs/spacesvm.git;
+git clone https://github.com/luxdefi/spacesvm.git;
 cd spacesvm;
 ./scripts/build.sh
 ```
@@ -549,21 +549,21 @@ Running the above commands will generate a binary and save it at
 `~/spacesvm/build/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm`.
 
 #### Move Binary
-Once the SpacesVM binary is built, you'll need to move it to AvalancheGo's
+Once the SpacesVM binary is built, you'll need to move it to Luxd's
 plugin directory (within the `--build-dir`) so it can be run by your node.
-When building from source, this defaults to `~/avalanchego/build/plugins`.
+When building from source, this defaults to `~/node/build/plugins`.
 This build directory is structured as:
 ```
 build-dir
-|_avalanchego
+|_node
     |_plugins
       |_evm
 ```
 
 To put the SpacesVM binary in the right place, run the following command
-(assuming the `avalanchego` and `spacesvm` repos are in the same folder):
+(assuming the `node` and `spacesvm` repos are in the same folder):
 ```bash
-mv ./spacesvm/build/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm ./avalanchego/build/plugins;
+mv ./spacesvm/build/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm ./node/build/plugins;
 ```
 
 #### Add Subnet to Whitelist
@@ -591,7 +591,7 @@ Example Node Args:
 
 #### Restart Node
 Once you've performed the following steps, you'll need to restart your
-AvalancheGo node for the changes to take effect.
+Luxd node for the changes to take effect.
 
 If you completed the steps successfully, you'll see the node print out:
 ```bash
@@ -623,7 +623,7 @@ ERROR[01-26|05:54:19] chains/manager.go#270: error creating chain 2AM3vsuLoJdGBG
 #### Become a Fuji Validator
 Once your node is up and running with the SpacesVM, you'll need to [become a Fuji Validator].
 This is the exact same flow as Mainnet except you only need to stake
-`1 AVAX` instead of `2000 AVAX`.
+`1 LUX` instead of `2000 LUX`.
 
 Recall, **only validators on the Primary Network (in this case Fuji) can become
 validators of subnets.**
@@ -640,24 +640,24 @@ subnets that anyone can join.
 If you have any questions, reach out to @\_patrickogrady on Twitter!
 
 ### Running a local network
-[`scripts/run.sh`](scripts/run.sh) automatically installs [avalanchego], sets up a local network,
+[`scripts/run.sh`](scripts/run.sh) automatically installs [node], sets up a local network,
 and creates a `spacesvm` genesis file. To build and run E2E tests, you need to set the variable `E2E` before it: `E2E=true ./scripts/run.sh 1.7.11`
 
 _See [`tests/e2e`](tests/e2e) to see how it's set up and how its client requests are made._
 
 ```bash
 # to startup a local cluster (good for development)
-cd ${HOME}/go/src/github.com/ava-labs/spacesvm
+cd ${HOME}/go/src/github.com/luxdefi/spacesvm
 ./scripts/run.sh 1.7.11
 
 # to run full e2e tests and shut down cluster afterwards
-cd ${HOME}/go/src/github.com/ava-labs/spacesvm
+cd ${HOME}/go/src/github.com/luxdefi/spacesvm
 E2E=true ./scripts/run.sh 1.7.11
 ```
 
 ```bash
 # inspect cluster endpoints when ready
-cat /tmp/avalanchego-v1.7.11/output.yaml
+cat /tmp/node-v1.7.11/output.yaml
 <<COMMENT
 endpoint: /ext/bc/2VCAhX6vE3UnXC6s1CBPE6jJ4c4cHWMfPgCptuWS59pQ9vbeLM
 logsDir: ...
@@ -703,7 +703,7 @@ kill 12811
 ```
 
 ### Deploying Your Own Network
-Anyone can deploy their own instance of the SpacesVM as a subnet on Avalanche.
+Anyone can deploy their own instance of the SpacesVM as a subnet on Lux.
 All you need to do is compile it, create a genesis, and send a few txs to the
 P-Chain.
 
@@ -712,12 +712,12 @@ or by using the [subnet-cli].
 
 [EIP-712]: https://eips.ethereum.org/EIPS/eip-712
 [tryspaces.xyz]: https://tryspaces.xyz
-[avalanchego]: https://github.com/ava-labs/avalanchego
-[subnet tutorial]: https://docs.avax.network/build/tutorials/platform/subnets/create-a-subnet
-[subnet-cli]: https://github.com/ava-labs/subnet-cli
-[Coreth]: https://github.com/ava-labs/coreth
-[C-Chain]: https://docs.avax.network/learn/platform-overview/#contract-chain-c-chain
-[Subnet]: https://docs.avax.network/learn/platform-overview/#subnets
+[node]: https://github.com/luxdefi/node
+[subnet tutorial]: https://docs.lux.network/build/tutorials/platform/subnets/create-a-subnet
+[subnet-cli]: https://github.com/luxdefi/subnet-cli
+[Coreth]: https://github.com/luxdefi/coreth
+[C-Chain]: https://docs.lux.network/learn/platform-overview/#contract-chain-c-chain
+[Subnet]: https://docs.lux.network/learn/platform-overview/#subnets
 [Spaces Subnet Demo]: https://tryspaces.xyz
 [Spaces Demo Validator Request]: https://forms.gle/aDFWBLEP9GvHwaFG6
-[become a Fuji Validator]: https://docs.avax.network/build/tutorials/nodes-and-staking/staking-avax-by-validating-or-delegating-with-the-avalanche-wallet
+[become a Fuji Validator]: https://docs.lux.network/build/tutorials/nodes-and-staking/staking-lux-by-validating-or-delegating-with-the-lux-wallet

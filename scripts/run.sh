@@ -33,51 +33,51 @@ if [[ ${E2E} == true ]]; then
   MODE="test"
 fi
 
-AVALANCHE_LOG_LEVEL=${AVALANCHE_LOG_LEVEL:-INFO}
+LUX_LOG_LEVEL=${LUX_LOG_LEVEL:-INFO}
 
 echo "Running with:"
 echo VERSION: ${VERSION}
 echo MODE: ${MODE}
 
 ############################
-# download avalanchego
-# https://github.com/ava-labs/avalanchego/releases
+# download node
+# https://github.com/luxdefi/node/releases
 GOARCH=$(go env GOARCH)
 GOOS=$(go env GOOS)
-DOWNLOAD_URL=https://github.com/ava-labs/avalanchego/releases/download/v${VERSION}/avalanchego-linux-${GOARCH}-v${VERSION}.tar.gz
-DOWNLOAD_PATH=/tmp/avalanchego.tar.gz
+DOWNLOAD_URL=https://github.com/luxdefi/node/releases/download/v${VERSION}/node-linux-${GOARCH}-v${VERSION}.tar.gz
+DOWNLOAD_PATH=/tmp/node.tar.gz
 if [[ ${GOOS} == "darwin" ]]; then
-  DOWNLOAD_URL=https://github.com/ava-labs/avalanchego/releases/download/v${VERSION}/avalanchego-macos-v${VERSION}.zip
-  DOWNLOAD_PATH=/tmp/avalanchego.zip
+  DOWNLOAD_URL=https://github.com/luxdefi/node/releases/download/v${VERSION}/node-macos-v${VERSION}.zip
+  DOWNLOAD_PATH=/tmp/node.zip
 fi
 
-rm -rf /tmp/avalanchego-v${VERSION}
-rm -rf /tmp/avalanchego-build
+rm -rf /tmp/node-v${VERSION}
+rm -rf /tmp/node-build
 rm -f ${DOWNLOAD_PATH}
 
-echo "downloading avalanchego ${VERSION} at ${DOWNLOAD_URL}"
+echo "downloading node ${VERSION} at ${DOWNLOAD_URL}"
 curl -L ${DOWNLOAD_URL} -o ${DOWNLOAD_PATH}
 
-echo "extracting downloaded avalanchego"
+echo "extracting downloaded node"
 if [[ ${GOOS} == "linux" ]]; then
   tar xzvf ${DOWNLOAD_PATH} -C /tmp
 elif [[ ${GOOS} == "darwin" ]]; then
-  unzip ${DOWNLOAD_PATH} -d /tmp/avalanchego-build
-  mv /tmp/avalanchego-build/build /tmp/avalanchego-v${VERSION}
+  unzip ${DOWNLOAD_PATH} -d /tmp/node-build
+  mv /tmp/node-build/build /tmp/node-v${VERSION}
 fi
-find /tmp/avalanchego-v${VERSION}
+find /tmp/node-v${VERSION}
 
-AVALANCHEGO_PATH=/tmp/avalanchego-v${VERSION}/avalanchego
-AVALANCHEGO_PLUGIN_DIR=/tmp/avalanchego-v${VERSION}/plugins
+LUXD_PATH=/tmp/node-v${VERSION}/node
+LUXD_PLUGIN_DIR=/tmp/node-v${VERSION}/plugins
 
 ############################
 
 ############################
 echo "building spacesvm"
 go build \
--o /tmp/avalanchego-v${VERSION}/plugins/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm \
+-o /tmp/node-v${VERSION}/plugins/sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm \
 ./cmd/spacesvm
-find /tmp/avalanchego-v${VERSION}
+find /tmp/node-v${VERSION}
 
 echo "building spaces-cli"
 go build -v -o /tmp/spaces-cli ./cmd/spaces-cli
@@ -111,30 +111,30 @@ ACK_GINKGO_RC=true ginkgo build ./tests/e2e
 ./tests/e2e/e2e.test --help
 
 #################################
-# download avalanche-network-runner
-# https://github.com/ava-labs/avalanche-network-runner
-# TODO: use "go install -v github.com/ava-labs/avalanche-network-runner/cmd/avalanche-network-runner@v${NETWORK_RUNNER_VERSION}"
+# download lux-netrunner
+# https://github.com/luxdefi/lux-netrunner
+# TODO: use "go install -v github.com/luxdefi/lux-netrunner/cmd/lux-netrunner@v${NETWORK_RUNNER_VERSION}"
 NETWORK_RUNNER_VERSION=1.3.5
-DOWNLOAD_PATH=/tmp/avalanche-network-runner.tar.gz
-DOWNLOAD_URL=https://github.com/ava-labs/avalanche-network-runner/releases/download/v${NETWORK_RUNNER_VERSION}/avalanche-network-runner_${NETWORK_RUNNER_VERSION}_linux_amd64.tar.gz
+DOWNLOAD_PATH=/tmp/lux-netrunner.tar.gz
+DOWNLOAD_URL=https://github.com/luxdefi/lux-netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/lux-netrunner_${NETWORK_RUNNER_VERSION}_linux_amd64.tar.gz
 if [[ ${GOOS} == "darwin" ]]; then
-  DOWNLOAD_URL=https://github.com/ava-labs/avalanche-network-runner/releases/download/v${NETWORK_RUNNER_VERSION}/avalanche-network-runner_${NETWORK_RUNNER_VERSION}_darwin_amd64.tar.gz
+  DOWNLOAD_URL=https://github.com/luxdefi/lux-netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/lux-netrunner_${NETWORK_RUNNER_VERSION}_darwin_amd64.tar.gz
 fi
 
 rm -f ${DOWNLOAD_PATH}
-rm -f /tmp/avalanche-network-runner
+rm -f /tmp/lux-netrunner
 
-echo "downloading avalanche-network-runner ${NETWORK_RUNNER_VERSION} at ${DOWNLOAD_URL}"
+echo "downloading lux-netrunner ${NETWORK_RUNNER_VERSION} at ${DOWNLOAD_URL}"
 curl -L ${DOWNLOAD_URL} -o ${DOWNLOAD_PATH}
 
-echo "extracting downloaded avalanche-network-runner"
+echo "extracting downloaded lux-netrunner"
 tar xzvf ${DOWNLOAD_PATH} -C /tmp
-/tmp/avalanche-network-runner -h
+/tmp/lux-netrunner -h
 
 ############################
-# run "avalanche-network-runner" server
-echo "launch avalanche-network-runner in the background"
-/tmp/avalanche-network-runner \
+# run "lux-netrunner" server
+echo "launch lux-netrunner in the background"
+/tmp/lux-netrunner \
 server \
 --log-level debug \
 --port=":32342" \
@@ -148,19 +148,19 @@ PID=${!}
 echo "running e2e tests"
 ./tests/e2e/e2e.test \
 --ginkgo.v \
---network-runner-log-level debug \
---network-runner-grpc-endpoint="0.0.0.0:32342" \
---avalanchego-path=${AVALANCHEGO_PATH} \
---avalanchego-plugin-dir=${AVALANCHEGO_PLUGIN_DIR} \
+--netrunner-log-level debug \
+--netrunner-grpc-endpoint="0.0.0.0:32342" \
+--node-path=${LUXD_PATH} \
+--node-plugin-dir=${LUXD_PLUGIN_DIR} \
 --vm-genesis-path=/tmp/spacesvm.genesis \
---output-path=/tmp/avalanchego-v${VERSION}/output.yaml \
+--output-path=/tmp/node-v${VERSION}/output.yaml \
 --mode=${MODE}
 
 ############################
 # e.g., print out MetaMask endpoints
-if [[ -f "/tmp/avalanchego-v${VERSION}/output.yaml" ]]; then
+if [[ -f "/tmp/node-v${VERSION}/output.yaml" ]]; then
   echo "cluster is ready!"
-  cat /tmp/avalanchego-v${VERSION}/output.yaml
+  cat /tmp/node-v${VERSION}/output.yaml
 else
   echo "cluster is not ready in time... terminating ${PID}"
   kill ${PID}
@@ -171,12 +171,12 @@ fi
 if [[ ${MODE} == "test" ]]; then
   # "e2e.test" already terminates the cluster for "test" mode
   # just in case tests are aborted, manually terminate them again
-  echo "network-runner RPC server was running on PID ${PID} as test mode; terminating the process..."
+  echo "netrunner RPC server was running on PID ${PID} as test mode; terminating the process..."
   pkill -P ${PID} || true
   kill -2 ${PID}
   pkill -9 -f sqja3uK17MJxfC7AN8nGadBw9JK5BcrsNwNynsqP5Gih8M5Bm || true # in case pkill didn't work
 else
-  echo "network-runner RPC server is running on PID ${PID}..."
+  echo "netrunner RPC server is running on PID ${PID}..."
   echo ""
   echo "use the following command to terminate:"
   echo ""

@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package client
@@ -10,12 +10,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/luxdefi/node/ids"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/tdata"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/tdata"
 )
 
 func PPInfo(info *chain.SpaceInfo) {

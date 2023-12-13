@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package vm
@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/spacesvm/utils/timer"
+	"github.com/luxdefi/node/snow/engine/common"
+	"github.com/luxdefi/spacesvm/utils/timer"
 	log "github.com/inconshreveable/log15"
 )
 
@@ -104,7 +104,7 @@ func (b *TimeBuilder) signalTxsReady() {
 	b.markBuilding()
 }
 
-// signal the avalanchego engine
+// signal the node engine
 // to build a block from pending transactions
 func (b *TimeBuilder) markBuilding() {
 	select {

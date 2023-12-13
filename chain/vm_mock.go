@@ -1,4 +1,4 @@
-// Copyright (C) 2022, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2022, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 //
 
@@ -11,8 +11,8 @@ package chain
 import (
 	reflect "reflect"
 
-	database "github.com/ava-labs/avalanchego/database"
-	ids "github.com/ava-labs/avalanchego/ids"
+	database "github.com/luxdefi/node/database"
+	ids "github.com/luxdefi/node/ids"
 	gomock "github.com/golang/mock/gomock"
 )
 

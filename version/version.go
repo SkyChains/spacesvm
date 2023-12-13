@@ -1,10 +1,10 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 // Package version defines version variables.
 package version
 
-import "github.com/ava-labs/avalanchego/version"
+import "github.com/luxdefi/node/version"
 
 var Version = &version.Semantic{
 	Major: 0,

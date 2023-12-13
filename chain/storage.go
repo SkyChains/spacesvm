@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package chain
@@ -10,16 +10,16 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/hashing"
+	"github.com/luxdefi/node/cache"
+	"github.com/luxdefi/node/database"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/utils/hashing"
 	"github.com/ethereum/go-ethereum/common"
 	smath "github.com/ethereum/go-ethereum/common/math"
 	"github.com/ethereum/go-ethereum/crypto"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/ava-labs/spacesvm/parser"
+	"github.com/luxdefi/spacesvm/parser"
 )
 
 // 0x0/ (block hashes)

@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package vm
@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/luxdefi/node/ids"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/parser"
-	"github.com/ava-labs/spacesvm/tdata"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/parser"
+	"github.com/luxdefi/spacesvm/tdata"
 )
 
 type PublicService struct {

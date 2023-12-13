@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package vm
@@ -6,10 +6,10 @@ package vm
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/database/versiondb"
+	"github.com/luxdefi/node/database/versiondb"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/ava-labs/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/chain"
 )
 
 func (vm *VM) pruneCall() bool {

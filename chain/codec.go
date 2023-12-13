@@ -1,13 +1,13 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 package chain
 
 import (
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/codec/linearcodec"
-	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/luxdefi/node/codec"
+	"github.com/luxdefi/node/codec/linearcodec"
+	"github.com/luxdefi/node/utils/units"
+	"github.com/luxdefi/node/utils/wrappers"
 )
 
 const (

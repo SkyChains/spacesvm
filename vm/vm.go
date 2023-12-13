@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 // Package vm implements custom VM.
@@ -15,22 +15,22 @@ import (
 
 	log "github.com/inconshreveable/log15"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/manager"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	snowmanblock "github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/json"
-	avagoversion "github.com/ava-labs/avalanchego/version"
-	"github.com/ava-labs/spacesvm/chain"
-	"github.com/ava-labs/spacesvm/mempool"
-	"github.com/ava-labs/spacesvm/version"
+	"github.com/luxdefi/node/cache"
+	"github.com/luxdefi/node/database"
+	"github.com/luxdefi/node/database/manager"
+	"github.com/luxdefi/node/database/versiondb"
+	"github.com/luxdefi/node/ids"
+	"github.com/luxdefi/node/snow"
+	"github.com/luxdefi/node/snow/choices"
+	"github.com/luxdefi/node/snow/consensus/snowman"
+	"github.com/luxdefi/node/snow/engine/common"
+	snowmanblock "github.com/luxdefi/node/snow/engine/snowman/block"
+	"github.com/luxdefi/node/utils"
+	"github.com/luxdefi/node/utils/json"
+	luxdversion "github.com/luxdefi/node/version"
+	"github.com/luxdefi/spacesvm/chain"
+	"github.com/luxdefi/spacesvm/mempool"
+	"github.com/luxdefi/spacesvm/version"
 )
 
 const (
@@ -314,7 +314,7 @@ func (vm *VM) HealthCheck(ctx context.Context) (interface{}, error) {
 }
 
 // implements "snowmanblock.ChainVM.commom.VM.validators.Connector"
-func (vm *VM) Connected(ctx context.Context, id ids.NodeID, nodeVersion *avagoversion.Application) error {
+func (vm *VM) Connected(ctx context.Context, id ids.NodeID, nodeVersion *luxdversion.Application) error {
 	// no-op
 	return nil
 }
@@ -381,7 +381,7 @@ func (vm *VM) ParseBlock(ctx context.Context, source []byte) (snowman.Block, err
 }
 
 // implements "snowmanblock.ChainVM"
-// called via "avalanchego" node over RPC
+// called via "node" node over RPC
 func (vm *VM) BuildBlock(ctx context.Context) (snowman.Block, error) {
 	log.Debug("BuildBlock triggered")
 	blk, err := chain.BuildBlock(vm, vm.preferred)

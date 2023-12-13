@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021, Ava Labs, Inc. All rights reserved.
+// Copyright (C) 2019-2021, Lux Partners Limited. All rights reserved.
 // See the file LICENSE for licensing terms.
 
 // "spaces-cli" implements spacesvm client operation interface.
@@ -9,7 +9,7 @@ import (
 
 	"github.com/fatih/color"
 
-	"github.com/ava-labs/spacesvm/cmd/spaces-cli/cmd"
+	"github.com/luxdefi/spacesvm/cmd/spaces-cli/cmd"
 )
 
 func main() {

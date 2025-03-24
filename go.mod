@@ -1,10 +1,10 @@
-module github.com/luxdefi/spacesvm
+module github.com/skychains/spacesvm
 
 go 1.18
 
 require (
-	github.com/luxdefi/lux-netrunner v1.3.5
-	github.com/luxdefi/node v1.9.8
+	github.com/skychains/netrunner v0.0.1
+	github.com/skychains/chain v0.0.1
 	github.com/ethereum/go-ethereum v1.10.26
 	github.com/fatih/color v1.13.0
 	github.com/golang/mock v1.6.0

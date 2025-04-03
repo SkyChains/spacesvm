@@ -11,8 +11,8 @@ package chain
 import (
 	reflect "reflect"
 
-	database "github.com/luxdefi/node/database"
-	ids "github.com/luxdefi/node/ids"
+	database "github.com/SkyChains/chain/database"
+	ids "github.com/SkyChains/chain/ids"
 	gomock "github.com/golang/mock/gomock"
 )
 

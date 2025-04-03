@@ -8,12 +8,12 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/luxdefi/node/ids"
-	"github.com/luxdefi/node/utils/set"
+	"github.com/SkyChains/chain/ids"
+	"github.com/SkyChains/chain/utils/set"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/luxdefi/spacesvm/chain"
-	"github.com/luxdefi/spacesvm/mempool"
+	"github.com/SkyChains/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/mempool"
 )
 
 // $ go install -v golang.org/x/perf/cmd/benchstat@latest

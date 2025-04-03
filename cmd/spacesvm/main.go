@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/luxdefi/node/vms/rpcchainvm"
-	"github.com/luxdefi/spacesvm/cmd/spacesvm/version"
-	"github.com/luxdefi/spacesvm/vm"
+	"github.com/SkyChains/chain/vms/rpcchainvm"
+	"github.com/SkyChains/spacesvm/cmd/spacesvm/version"
+	"github.com/SkyChains/spacesvm/vm"
 	log "github.com/inconshreveable/log15"
 	"github.com/spf13/cobra"
 )

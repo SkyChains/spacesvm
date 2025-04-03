@@ -6,7 +6,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/luxdefi/spacesvm/parser"
+	"github.com/SkyChains/spacesvm/parser"
 )
 
 func getPathOp(args []string) (space string, key string, err error) {

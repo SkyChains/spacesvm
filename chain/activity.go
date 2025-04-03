@@ -3,7 +3,7 @@
 
 package chain
 
-import "github.com/luxdefi/node/ids"
+import "github.com/SkyChains/chain/ids"
 
 type Activity struct {
 	Tmstmp int64  `serialize:"true" json:"timestamp"`

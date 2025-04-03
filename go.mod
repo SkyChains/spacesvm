@@ -1,10 +1,10 @@
-module github.com/skychains/spacesvm
+module github.com/SkyChains/spacesvm
 
 go 1.18
 
 require (
-	github.com/skychains/netrunner v0.0.1
-	github.com/skychains/chain v0.0.1
+	github.com/SkyChains/netrunner v0.0.1
+	github.com/SkyChains/chain v0.0.1
 	github.com/ethereum/go-ethereum v1.10.26
 	github.com/fatih/color v1.13.0
 	github.com/golang/mock v1.6.0
@@ -21,7 +21,7 @@ require (
 	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/VictoriaMetrics/fastcache v1.10.0 // indirect
-	github.com/luxdefi/coreth v0.11.7-rc.0 // indirect
+	github.com/SkyChains/coreth v0.11.7-rc.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2 // indirect
 	github.com/btcsuite/btcd/btcutil v1.1.3 // indirect

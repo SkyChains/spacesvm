@@ -13,8 +13,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/luxdefi/spacesvm/chain"
-	"github.com/luxdefi/spacesvm/client"
+	"github.com/SkyChains/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/client"
 )
 
 var transferCmd = &cobra.Command{

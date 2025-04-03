@@ -10,12 +10,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/luxdefi/node/ids"
+	"github.com/SkyChains/chain/ids"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
 
-	"github.com/luxdefi/spacesvm/chain"
-	"github.com/luxdefi/spacesvm/tdata"
+	"github.com/SkyChains/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/tdata"
 )
 
 func PPInfo(info *chain.SpaceInfo) {

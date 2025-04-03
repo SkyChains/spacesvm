@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/luxdefi/node/database"
-	"github.com/luxdefi/node/database/versiondb"
-	"github.com/luxdefi/node/utils/units"
+	"github.com/SkyChains/chain/database"
+	"github.com/SkyChains/chain/database/versiondb"
+	"github.com/SkyChains/chain/utils/units"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	log "github.com/inconshreveable/log15"

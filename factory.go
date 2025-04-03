@@ -4,9 +4,9 @@
 package vm
 
 import (
-	"github.com/luxdefi/node/snow"
-	"github.com/luxdefi/node/vms"
-	"github.com/luxdefi/spacesvm/vm"
+	"github.com/SkyChains/chain/snow"
+	"github.com/SkyChains/chain/vms"
+	"github.com/SkyChains/spacesvm/vm"
 )
 
 var _ vms.Factory = &Factory{}

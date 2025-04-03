@@ -10,8 +10,8 @@ package chain
 import (
 	reflect "reflect"
 
-	ids "github.com/luxdefi/node/ids"
-	set "github.com/luxdefi/node/utils/set"
+	ids "github.com/SkyChains/chain/ids"
+	set "github.com/SkyChains/chain/utils/set"
 	gomock "github.com/golang/mock/gomock"
 )
 

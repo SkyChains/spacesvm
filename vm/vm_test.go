@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/luxdefi/node/cache"
-	"github.com/luxdefi/node/ids"
-	"github.com/luxdefi/spacesvm/chain"
+	"github.com/SkyChains/chain/cache"
+	"github.com/SkyChains/chain/ids"
+	"github.com/SkyChains/spacesvm/chain"
 )
 
 func TestBlockCache(t *testing.T) {

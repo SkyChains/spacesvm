@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/luxdefi/spacesvm/parser"
-	"github.com/luxdefi/spacesvm/tdata"
+	"github.com/SkyChains/spacesvm/parser"
+	"github.com/SkyChains/spacesvm/tdata"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 

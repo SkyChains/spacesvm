@@ -6,8 +6,8 @@ package chain
 import (
 	"strconv"
 
-	"github.com/luxdefi/spacesvm/parser"
-	"github.com/luxdefi/spacesvm/tdata"
+	"github.com/SkyChains/spacesvm/parser"
+	"github.com/SkyChains/spacesvm/tdata"
 )
 
 var _ UnsignedTransaction = &DeleteTx{}

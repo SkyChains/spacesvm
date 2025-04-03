@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/luxdefi/node/ids"
-	"github.com/luxdefi/node/snow/choices"
+	"github.com/SkyChains/chain/ids"
+	"github.com/SkyChains/chain/snow/choices"
 	"github.com/ethereum/go-ethereum/crypto"
 	gomock "github.com/golang/mock/gomock"
 )

@@ -4,10 +4,10 @@
 package chain
 
 import (
-	"github.com/luxdefi/node/codec"
-	"github.com/luxdefi/node/codec/linearcodec"
-	"github.com/luxdefi/node/utils/units"
-	"github.com/luxdefi/node/utils/wrappers"
+	"github.com/SkyChains/chain/codec"
+	"github.com/SkyChains/chain/codec/linearcodec"
+	"github.com/SkyChains/chain/utils/units"
+	"github.com/SkyChains/chain/utils/wrappers"
 )
 
 const (

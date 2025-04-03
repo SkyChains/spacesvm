@@ -9,9 +9,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/luxdefi/node/ids"
+	"github.com/SkyChains/chain/ids"
 
-	"github.com/luxdefi/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/chain"
 )
 
 const (

@@ -11,7 +11,7 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/luxdefi/spacesvm/client"
+	"github.com/SkyChains/spacesvm/client"
 )
 
 var resolveCmd = &cobra.Command{

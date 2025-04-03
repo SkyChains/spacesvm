@@ -7,7 +7,7 @@ import (
 	"bytes"
 	"strconv"
 
-	"github.com/luxdefi/spacesvm/tdata"
+	"github.com/SkyChains/spacesvm/tdata"
 	"github.com/ethereum/go-ethereum/common"
 )
 

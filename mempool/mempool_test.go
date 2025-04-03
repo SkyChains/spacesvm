@@ -9,8 +9,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/luxdefi/spacesvm/chain"
-	"github.com/luxdefi/spacesvm/mempool"
+	"github.com/SkyChains/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/mempool"
 )
 
 func TestMempool(t *testing.T) {

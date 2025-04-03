@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	luxdVersion "github.com/luxdefi/node/version"
-	spacesVersion "github.com/luxdefi/spacesvm/version"
+	luxdVersion "github.com/SkyChains/chain/version"
+	spacesVersion "github.com/SkyChains/spacesvm/version"
 	"github.com/stretchr/testify/assert"
 )
 

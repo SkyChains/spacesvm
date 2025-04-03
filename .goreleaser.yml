@@ -58,5 +58,5 @@ builds:
           - CC=o64-clang
 release:
   github:
-    owner: luxdefi
+    owner: SkyChains
     name: spacesvm

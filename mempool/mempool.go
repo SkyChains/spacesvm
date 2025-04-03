@@ -7,10 +7,10 @@ import (
 	"container/heap"
 	"sync"
 
-	"github.com/luxdefi/node/ids"
-	"github.com/luxdefi/node/utils/set"
+	"github.com/SkyChains/chain/ids"
+	"github.com/SkyChains/chain/utils/set"
 
-	"github.com/luxdefi/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/chain"
 )
 
 var _ chain.Mempool = &Mempool{}

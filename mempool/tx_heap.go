@@ -6,9 +6,9 @@ package mempool
 import (
 	"fmt"
 
-	"github.com/luxdefi/node/ids"
+	"github.com/SkyChains/chain/ids"
 
-	"github.com/luxdefi/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/chain"
 )
 
 // txEntry is used to track the work transactions pay to be included in the

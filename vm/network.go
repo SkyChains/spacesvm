@@ -6,9 +6,9 @@ package vm
 import (
 	"context"
 
-	"github.com/luxdefi/node/cache"
-	"github.com/luxdefi/node/ids"
-	"github.com/luxdefi/spacesvm/chain"
+	"github.com/SkyChains/chain/cache"
+	"github.com/SkyChains/chain/ids"
+	"github.com/SkyChains/spacesvm/chain"
 	log "github.com/inconshreveable/log15"
 )
 

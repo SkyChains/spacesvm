@@ -4,12 +4,12 @@
 package vm
 
 import (
-	"github.com/luxdefi/node/database"
-	"github.com/luxdefi/node/ids"
-	"github.com/luxdefi/node/utils/set"
+	"github.com/SkyChains/chain/database"
+	"github.com/SkyChains/chain/ids"
+	"github.com/SkyChains/chain/utils/set"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/luxdefi/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/chain"
 )
 
 func (vm *VM) Genesis() *chain.Genesis {

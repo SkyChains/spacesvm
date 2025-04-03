@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/luxdefi/node/ids"
+	"github.com/SkyChains/chain/ids"
 )
 
 func TestBaseTx(t *testing.T) {

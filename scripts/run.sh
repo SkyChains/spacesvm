@@ -41,13 +41,13 @@ echo MODE: ${MODE}
 
 ############################
 # download node
-# https://github.com/luxdefi/node/releases
+# https://github.com/SkyChains/chain/releases
 GOARCH=$(go env GOARCH)
 GOOS=$(go env GOOS)
-DOWNLOAD_URL=https://github.com/luxdefi/node/releases/download/v${VERSION}/node-linux-${GOARCH}-v${VERSION}.tar.gz
+DOWNLOAD_URL=https://github.com/SkyChains/chain/releases/download/v${VERSION}/node-linux-${GOARCH}-v${VERSION}.tar.gz
 DOWNLOAD_PATH=/tmp/node.tar.gz
 if [[ ${GOOS} == "darwin" ]]; then
-  DOWNLOAD_URL=https://github.com/luxdefi/node/releases/download/v${VERSION}/node-macos-v${VERSION}.zip
+  DOWNLOAD_URL=https://github.com/SkyChains/chain/releases/download/v${VERSION}/node-macos-v${VERSION}.zip
   DOWNLOAD_PATH=/tmp/node.zip
 fi
 
@@ -111,30 +111,30 @@ ACK_GINKGO_RC=true ginkgo build ./tests/e2e
 ./tests/e2e/e2e.test --help
 
 #################################
-# download lux-netrunner
-# https://github.com/luxdefi/lux-netrunner
-# TODO: use "go install -v github.com/luxdefi/lux-netrunner/cmd/lux-netrunner@v${NETWORK_RUNNER_VERSION}"
+# download netrunner
+# https://github.com/SkyChains/netrunner
+# TODO: use "go install -v github.com/SkyChains/netrunner/cmd/netrunner@v${NETWORK_RUNNER_VERSION}"
 NETWORK_RUNNER_VERSION=1.3.5
-DOWNLOAD_PATH=/tmp/lux-netrunner.tar.gz
-DOWNLOAD_URL=https://github.com/luxdefi/lux-netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/lux-netrunner_${NETWORK_RUNNER_VERSION}_linux_amd64.tar.gz
+DOWNLOAD_PATH=/tmp/netrunner.tar.gz
+DOWNLOAD_URL=https://github.com/SkyChains/netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/netrunner_${NETWORK_RUNNER_VERSION}_linux_amd64.tar.gz
 if [[ ${GOOS} == "darwin" ]]; then
-  DOWNLOAD_URL=https://github.com/luxdefi/lux-netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/lux-netrunner_${NETWORK_RUNNER_VERSION}_darwin_amd64.tar.gz
+  DOWNLOAD_URL=https://github.com/SkyChains/netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/netrunner_${NETWORK_RUNNER_VERSION}_darwin_amd64.tar.gz
 fi
 
 rm -f ${DOWNLOAD_PATH}
-rm -f /tmp/lux-netrunner
+rm -f /tmp/netrunner
 
-echo "downloading lux-netrunner ${NETWORK_RUNNER_VERSION} at ${DOWNLOAD_URL}"
+echo "downloading netrunner ${NETWORK_RUNNER_VERSION} at ${DOWNLOAD_URL}"
 curl -L ${DOWNLOAD_URL} -o ${DOWNLOAD_PATH}
 
-echo "extracting downloaded lux-netrunner"
+echo "extracting downloaded netrunner"
 tar xzvf ${DOWNLOAD_PATH} -C /tmp
-/tmp/lux-netrunner -h
+/tmp/netrunner -h
 
 ############################
-# run "lux-netrunner" server
-echo "launch lux-netrunner in the background"
-/tmp/lux-netrunner \
+# run "netrunner" server
+echo "launch netrunner in the background"
+/tmp/netrunner \
 server \
 --log-level debug \
 --port=":32342" \

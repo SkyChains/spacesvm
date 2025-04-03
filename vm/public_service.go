@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/luxdefi/node/ids"
+	"github.com/SkyChains/chain/ids"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/luxdefi/spacesvm/chain"
-	"github.com/luxdefi/spacesvm/parser"
-	"github.com/luxdefi/spacesvm/tdata"
+	"github.com/SkyChains/spacesvm/chain"
+	"github.com/SkyChains/spacesvm/parser"
+	"github.com/SkyChains/spacesvm/tdata"
 )
 
 type PublicService struct {

@@ -41,13 +41,13 @@ echo MODE: ${MODE}
 
 ############################
 # download node
-# https://github.com/SkyChains/chain/releases
+# https://github.com/skychains/chain/releases
 GOARCH=$(go env GOARCH)
 GOOS=$(go env GOOS)
-DOWNLOAD_URL=https://github.com/SkyChains/chain/releases/download/v${VERSION}/node-linux-${GOARCH}-v${VERSION}.tar.gz
+DOWNLOAD_URL=https://github.com/skychains/chain/releases/download/v${VERSION}/node-linux-${GOARCH}-v${VERSION}.tar.gz
 DOWNLOAD_PATH=/tmp/node.tar.gz
 if [[ ${GOOS} == "darwin" ]]; then
-  DOWNLOAD_URL=https://github.com/SkyChains/chain/releases/download/v${VERSION}/node-macos-v${VERSION}.zip
+  DOWNLOAD_URL=https://github.com/skychains/chain/releases/download/v${VERSION}/node-macos-v${VERSION}.zip
   DOWNLOAD_PATH=/tmp/node.zip
 fi
 
@@ -112,13 +112,13 @@ ACK_GINKGO_RC=true ginkgo build ./tests/e2e
 
 #################################
 # download netrunner
-# https://github.com/SkyChains/netrunner
-# TODO: use "go install -v github.com/SkyChains/netrunner/cmd/netrunner@v${NETWORK_RUNNER_VERSION}"
+# https://github.com/skychains/netrunner
+# TODO: use "go install -v github.com/skychains/netrunner/cmd/netrunner@v${NETWORK_RUNNER_VERSION}"
 NETWORK_RUNNER_VERSION=1.3.5
 DOWNLOAD_PATH=/tmp/netrunner.tar.gz
-DOWNLOAD_URL=https://github.com/SkyChains/netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/netrunner_${NETWORK_RUNNER_VERSION}_linux_amd64.tar.gz
+DOWNLOAD_URL=https://github.com/skychains/netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/netrunner_${NETWORK_RUNNER_VERSION}_linux_amd64.tar.gz
 if [[ ${GOOS} == "darwin" ]]; then
-  DOWNLOAD_URL=https://github.com/SkyChains/netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/netrunner_${NETWORK_RUNNER_VERSION}_darwin_amd64.tar.gz
+  DOWNLOAD_URL=https://github.com/skychains/netrunner/releases/download/v${NETWORK_RUNNER_VERSION}/netrunner_${NETWORK_RUNNER_VERSION}_darwin_amd64.tar.gz
 fi
 
 rm -f ${DOWNLOAD_PATH}

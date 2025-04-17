@@ -9,8 +9,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/SkyChains/spacesvm/parser"
-	"github.com/SkyChains/spacesvm/tdata"
+	"github.com/skychains/spacesvm/parser"
+	"github.com/skychains/spacesvm/tdata"
 )
 
 var _ UnsignedTransaction = &ClaimTx{}

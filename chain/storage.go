@@ -10,16 +10,16 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/SkyChains/chain/cache"
-	"github.com/SkyChains/chain/database"
-	"github.com/SkyChains/chain/ids"
-	"github.com/SkyChains/chain/utils/hashing"
+	"github.com/skychains/chain/cache"
+	"github.com/skychains/chain/database"
+	"github.com/skychains/chain/ids"
+	"github.com/skychains/chain/utils/hashing"
 	"github.com/ethereum/go-ethereum/common"
 	smath "github.com/ethereum/go-ethereum/common/math"
 	"github.com/ethereum/go-ethereum/crypto"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/SkyChains/spacesvm/parser"
+	"github.com/skychains/spacesvm/parser"
 )
 
 // 0x0/ (block hashes)

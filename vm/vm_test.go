@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/SkyChains/chain/cache"
-	"github.com/SkyChains/chain/ids"
-	"github.com/SkyChains/spacesvm/chain"
+	"github.com/skychains/chain/cache"
+	"github.com/skychains/chain/ids"
+	"github.com/skychains/spacesvm/chain"
 )
 
 func TestBlockCache(t *testing.T) {

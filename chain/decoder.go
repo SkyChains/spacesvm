@@ -10,8 +10,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 
-	"github.com/SkyChains/chain/ids"
-	"github.com/SkyChains/spacesvm/tdata"
+	"github.com/skychains/chain/ids"
+	"github.com/skychains/spacesvm/tdata"
 )
 
 const (

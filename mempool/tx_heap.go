@@ -6,9 +6,9 @@ package mempool
 import (
 	"fmt"
 
-	"github.com/SkyChains/chain/ids"
+	"github.com/skychains/chain/ids"
 
-	"github.com/SkyChains/spacesvm/chain"
+	"github.com/skychains/spacesvm/chain"
 )
 
 // txEntry is used to track the work transactions pay to be included in the

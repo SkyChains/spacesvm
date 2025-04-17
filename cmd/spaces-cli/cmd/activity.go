@@ -9,7 +9,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/SkyChains/spacesvm/client"
+	"github.com/skychains/spacesvm/client"
 )
 
 var activityCmd = &cobra.Command{

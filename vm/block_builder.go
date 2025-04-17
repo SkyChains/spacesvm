@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/SkyChains/chain/snow/engine/common"
-	"github.com/SkyChains/spacesvm/utils/timer"
+	"github.com/skychains/chain/snow/engine/common"
+	"github.com/skychains/spacesvm/utils/timer"
 	log "github.com/inconshreveable/log15"
 )
 

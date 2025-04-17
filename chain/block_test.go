@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/SkyChains/chain/ids"
-	"github.com/SkyChains/chain/snow/choices"
+	"github.com/skychains/chain/ids"
+	"github.com/skychains/chain/snow/choices"
 	"github.com/ethereum/go-ethereum/crypto"
 	gomock "github.com/golang/mock/gomock"
 )

@@ -134,7 +134,7 @@ The easiest way to try out SpacesVM is to visit the demo website
 ### spaces-cli
 #### Install
 ```bash
-git clone https://github.com/SkyChains/spacesvm.git;
+git clone https://github.com/skychains/spacesvm.git;
 cd spacesvm;
 go install -v ./cmd/spaces-cli;
 ```
@@ -182,7 +182,7 @@ spaces-cli resolve-file spaceslover/6fe5a52f52b34fb1e07ba90bad47811c645176d0d49e
 spaces-cli delete-file spaceslover/6fe5a52f52b34fb1e07ba90bad47811c645176d0d49ef0c7a7b4b22013f676c8
 ```
 
-### [Golang SDK](https://github.com/SkyChains/spacesvm/blob/master/client/client.go)
+### [Golang SDK](https://github.com/skychains/spacesvm/blob/master/client/client.go)
 ```golang
 // Client defines spacesvm client operations.
 type Client interface {
@@ -527,7 +527,7 @@ _You can find the genesis used for the Spaces Demo in `networks/42/*`._
 
 #### Download and Build SpacesVM
 ```bash
-git clone https://github.com/SkyChains/spacesvm.git;
+git clone https://github.com/skychains/spacesvm.git;
 cd spacesvm;
 ./scripts/build.sh
 ```
@@ -634,11 +634,11 @@ _See [`tests/e2e`](tests/e2e) to see how it's set up and how its client requests
 
 ```bash
 # to startup a local cluster (good for development)
-cd ${HOME}/go/src/github.com/SkyChains/spacesvm
+cd ${HOME}/go/src/github.com/skychains/spacesvm
 ./scripts/run.sh 1.7.11
 
 # to run full e2e tests and shut down cluster afterwards
-cd ${HOME}/go/src/github.com/SkyChains/spacesvm
+cd ${HOME}/go/src/github.com/skychains/spacesvm
 E2E=true ./scripts/run.sh 1.7.11
 ```
 
@@ -699,10 +699,10 @@ or by using the [subnet-cli].
 
 [EIP-712]: https://eips.ethereum.org/EIPS/eip-712
 [tryspaces.xyz]: https://tryspaces.xyz
-[node]: https://github.com/SkyChains/chain
+[node]: https://github.com/skychains/chain
 [subnet tutorial]: https://docs.lux.network/build/tutorials/platform/subnets/create-a-subnet
-[subnet-cli]: https://github.com/SkyChains/cli
-[Coreth]: https://github.com/SkyChains/coreth
+[subnet-cli]: https://github.com/skychains/cli
+[Coreth]: https://github.com/skychains/coreth
 [C-Chain]: https://docs.lux.network/learn/platform-overview/#contract-chain-c-chain
 [Subnet]: https://docs.lux.network/learn/platform-overview/#subnets
 [Spaces Subnet Demo]: https://tryspaces.xyz

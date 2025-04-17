@@ -3,7 +3,7 @@
 
 package chain
 
-import "github.com/SkyChains/chain/ids"
+import "github.com/skychains/chain/ids"
 
 type Activity struct {
 	Tmstmp int64  `serialize:"true" json:"timestamp"`

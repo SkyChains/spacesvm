@@ -6,10 +6,10 @@ package vm
 import (
 	"time"
 
-	"github.com/SkyChains/chain/database/versiondb"
+	"github.com/skychains/chain/database/versiondb"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/SkyChains/spacesvm/chain"
+	"github.com/skychains/spacesvm/chain"
 )
 
 func (vm *VM) pruneCall() bool {

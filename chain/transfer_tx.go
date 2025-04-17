@@ -7,7 +7,7 @@ import (
 	"bytes"
 	"strconv"
 
-	"github.com/SkyChains/spacesvm/tdata"
+	"github.com/skychains/spacesvm/tdata"
 	"github.com/ethereum/go-ethereum/common"
 )
 

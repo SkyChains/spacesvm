@@ -9,9 +9,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/SkyChains/chain/ids"
+	"github.com/skychains/chain/ids"
 
-	"github.com/SkyChains/spacesvm/chain"
+	"github.com/skychains/spacesvm/chain"
 )
 
 const (

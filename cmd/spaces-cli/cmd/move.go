@@ -12,9 +12,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/SkyChains/spacesvm/chain"
-	"github.com/SkyChains/spacesvm/client"
-	"github.com/SkyChains/spacesvm/parser"
+	"github.com/skychains/spacesvm/chain"
+	"github.com/skychains/spacesvm/client"
+	"github.com/skychains/spacesvm/parser"
 )
 
 var moveCmd = &cobra.Command{

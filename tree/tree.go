@@ -12,14 +12,14 @@ import (
 	"io"
 	"strings"
 
-	"github.com/SkyChains/chain/utils/units"
+	"github.com/skychains/chain/utils/units"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
 
-	"github.com/SkyChains/spacesvm/chain"
-	"github.com/SkyChains/spacesvm/client"
-	"github.com/SkyChains/spacesvm/parser"
+	"github.com/skychains/spacesvm/chain"
+	"github.com/skychains/spacesvm/client"
+	"github.com/skychains/spacesvm/parser"
 )
 
 type Root struct {

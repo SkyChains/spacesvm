@@ -13,7 +13,7 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/SkyChains/spacesvm/chain"
+	"github.com/skychains/spacesvm/chain"
 )
 
 var (

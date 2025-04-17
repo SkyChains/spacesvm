@@ -10,8 +10,8 @@ package chain
 import (
 	reflect "reflect"
 
-	ids "github.com/SkyChains/chain/ids"
-	set "github.com/SkyChains/chain/utils/set"
+	ids "github.com/skychains/chain/ids"
+	set "github.com/skychains/chain/utils/set"
 	gomock "github.com/golang/mock/gomock"
 )
 

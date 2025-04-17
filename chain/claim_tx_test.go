@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/SkyChains/chain/database/memdb"
-	"github.com/SkyChains/chain/ids"
+	"github.com/skychains/chain/database/memdb"
+	"github.com/skychains/chain/ids"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 )

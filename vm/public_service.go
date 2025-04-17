@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/SkyChains/chain/ids"
+	"github.com/skychains/chain/ids"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/SkyChains/spacesvm/chain"
-	"github.com/SkyChains/spacesvm/parser"
-	"github.com/SkyChains/spacesvm/tdata"
+	"github.com/skychains/spacesvm/chain"
+	"github.com/skychains/spacesvm/parser"
+	"github.com/skychains/spacesvm/tdata"
 )
 
 type PublicService struct {

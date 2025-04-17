@@ -4,7 +4,7 @@
 package chain
 
 import (
-	"github.com/SkyChains/chain/ids"
+	"github.com/skychains/chain/ids"
 )
 
 type BaseTx struct {

@@ -7,8 +7,8 @@ package version
 import (
 	"fmt"
 
-	"github.com/SkyChains/spacesvm/version"
-	"github.com/SkyChains/spacesvm/vm"
+	"github.com/skychains/spacesvm/version"
+	"github.com/skychains/spacesvm/vm"
 	"github.com/spf13/cobra"
 )
 

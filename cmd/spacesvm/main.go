@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/SkyChains/chain/vms/rpcchainvm"
-	"github.com/SkyChains/spacesvm/cmd/spacesvm/version"
-	"github.com/SkyChains/spacesvm/vm"
+	"github.com/skychains/chain/vms/rpcchainvm"
+	"github.com/skychains/spacesvm/cmd/spacesvm/version"
+	"github.com/skychains/spacesvm/vm"
 	log "github.com/inconshreveable/log15"
 	"github.com/spf13/cobra"
 )

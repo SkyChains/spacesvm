@@ -4,9 +4,9 @@
 package vm
 
 import (
-	"github.com/SkyChains/chain/snow"
-	"github.com/SkyChains/chain/vms"
-	"github.com/SkyChains/spacesvm/vm"
+	"github.com/skychains/chain/snow"
+	"github.com/skychains/chain/vms"
+	"github.com/skychains/spacesvm/vm"
 )
 
 var _ vms.Factory = &Factory{}

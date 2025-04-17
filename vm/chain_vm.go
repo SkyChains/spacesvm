@@ -4,12 +4,12 @@
 package vm
 
 import (
-	"github.com/SkyChains/chain/database"
-	"github.com/SkyChains/chain/ids"
-	"github.com/SkyChains/chain/utils/set"
+	"github.com/skychains/chain/database"
+	"github.com/skychains/chain/ids"
+	"github.com/skychains/chain/utils/set"
 	log "github.com/inconshreveable/log15"
 
-	"github.com/SkyChains/spacesvm/chain"
+	"github.com/skychains/spacesvm/chain"
 )
 
 func (vm *VM) Genesis() *chain.Genesis {

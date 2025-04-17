@@ -11,8 +11,8 @@ package chain
 import (
 	reflect "reflect"
 
-	database "github.com/SkyChains/chain/database"
-	ids "github.com/SkyChains/chain/ids"
+	database "github.com/skychains/chain/database"
+	ids "github.com/skychains/chain/ids"
 	gomock "github.com/golang/mock/gomock"
 )
 

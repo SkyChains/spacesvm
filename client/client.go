@@ -11,16 +11,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SkyChains/chain/ids"
-	"github.com/SkyChains/chain/utils/rpc"
+	"github.com/skychains/chain/ids"
+	"github.com/skychains/chain/utils/rpc"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/fatih/color"
 
-	"github.com/SkyChains/spacesvm/chain"
-	"github.com/SkyChains/spacesvm/parser"
-	"github.com/SkyChains/spacesvm/tdata"
-	"github.com/SkyChains/spacesvm/vm"
+	"github.com/skychains/spacesvm/chain"
+	"github.com/skychains/spacesvm/parser"
+	"github.com/skychains/spacesvm/tdata"
+	"github.com/skychains/spacesvm/vm"
 )
 
 // Client defines spacesvm client operations.

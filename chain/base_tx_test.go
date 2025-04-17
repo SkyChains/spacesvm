@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/SkyChains/chain/ids"
+	"github.com/skychains/chain/ids"
 )
 
 func TestBaseTx(t *testing.T) {

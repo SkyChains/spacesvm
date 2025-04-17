@@ -11,8 +11,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/SkyChains/spacesvm/client"
-	"github.com/SkyChains/spacesvm/tree"
+	"github.com/skychains/spacesvm/client"
+	"github.com/skychains/spacesvm/tree"
 )
 
 var deleteFileCmd = &cobra.Command{

@@ -4,7 +4,7 @@
 // Package version defines version variables.
 package version
 
-import "github.com/SkyChains/chain/version"
+import "github.com/skychains/chain/version"
 
 var Version = &version.Semantic{
 	Major: 0,
